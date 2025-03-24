@@ -1,7 +1,7 @@
 import asyncio
 import aiosqlite
 
-DB_PATH = "/root/company_new_server/users.db"
+DB_PATH = "/root/company_new_server/src/BD/users.db"
 
 
 async def view_all_users(db):

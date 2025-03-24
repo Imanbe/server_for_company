@@ -7,7 +7,7 @@ from ..BD.users_db import distribute_tasks, get_available_users
 from ..Utils.BitrixErrors import ServerBitrixErrors as errorBitrix
 
 
-async def process_carex_random(task, b: BitrixAsync):
+async def process_company_random(task, b: BitrixAsync):
     deal_id = task['deal_id']
     cont_id = task['cont_id']
     # Проверка на наличие параметров
