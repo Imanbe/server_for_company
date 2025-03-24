@@ -11,7 +11,7 @@ def load_handlers(handler_config: Dict[str, str]) -> Dict[str, Callable]:
             module = import_module(module_name)
             handler = getattr(module, func_name)
             handlers[task_type] = handler
-            logger.info(f'Loaded handler for {task_type}: {handler_path}')
+            logger.info(f"Loaded handler for {task_type}: {handler_path}")
         except (ImportError, AttributeError) as e:
-            logger.error(f'Failed to load handler {handler_path} for {task_type}: {e}')
+            logger.error(f"Failed to load handler {handler_path} for {task_type}: {e}")
     return handlers

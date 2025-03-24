@@ -1,0 +1,1 @@
+from handler_process_carex_random import process_carex_random

@@ -30,7 +30,9 @@ async def view_database():
                 if choice == "1":
                     await view_all_users(db)
                 elif choice == "2":
-                    cursor = await db.execute("SELECT user_id, user_name FROM users WHERE is_excluded = 0")
+                    cursor = await db.execute(
+                        "SELECT user_id, user_name FROM users WHERE is_excluded = 0"
+                    )
                     rows = await cursor.fetchall()
                     if not rows:
                         print("Нет доступных пользователей.")
@@ -50,6 +52,7 @@ async def view_database():
         print(f"Ошибка при подключении к базе данных: {e}")
     except Exception as e:
         print(f"Неожиданная ошибка: {e}")
+
 
 if __name__ == "__main__":
     asyncio.run(view_database())
